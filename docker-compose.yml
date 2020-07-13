@@ -20,6 +20,6 @@ services:
       - .:/app
     depends_on:
       - db_pg
-    command: ["./wait-for-postgres.sh", "db_pg", "python", "app.py"]
+    #command: ["./wait-for-postgres.sh", "db_pg", "python", "app.py"]
   
   

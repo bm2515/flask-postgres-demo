@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 #Credentials for DataBase connection
 DBUSER = 'postgres'
 DBPASS = 'test123'
-DBHOST = 'localhost'
+DBHOST = 'db_pg'
 DBPORT = '5432'
 DBNAME = 'SIHA_postgres'
 
@@ -25,6 +25,5 @@ Base = declarative_base()
 Base.query = db_session.query_property()
 
 def init_db():
-    
-    import models
-    Base.metadata.create_all(bind=engine)
+        import models
+        Base.metadata.create_all(bind=engine)
