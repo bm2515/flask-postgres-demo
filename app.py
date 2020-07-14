@@ -10,6 +10,7 @@ from models import User, Fitness
 from database import db_session
 from schema import user_schema, fitness_schema
 from input_validation import post_input_validation, get_input_validation
+import database
 
 #A Flask REST API Demo which records and retrieves user's daily fitness information
 #How to Use Flask REST API:
@@ -20,6 +21,7 @@ from input_validation import post_input_validation, get_input_validation
 
 #Initialization of Flask app
 app = Flask(__name__)
+database.init_db()
 
 
 #API End Point to Register a new user to the System
